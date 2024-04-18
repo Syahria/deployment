@@ -22,11 +22,8 @@ st.markdown("""
             Kumpulan data tersebut mencakup atribut utama seperti merek, kecepatan prosesor, ukuran RAM, kapasitas penyimpanan, ukuran layar, dan berat.
             """)
 
-# Path absolut dari file CSV
-DATA_URL = 'D:/TUGAS/Semester 4/Penggalian Data & Analitika Proses Bisnis/Praktikum/Deployment/Laptop_price.csv'
-
 # Membaca file CSV
-df = pd.read_csv(DATA_URL)
+df = pd.read_csv('Laptop_price.csv', encoding='utf-8')
 
 # Sidebar
 section = st.sidebar.selectbox("Choose Section", ["EDA", "4 Pilar Visualisasi", "Modelling"])
