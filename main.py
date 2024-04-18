@@ -10,6 +10,9 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
 
+# Membaca file CSV
+df = pd.read_csv('Laptop_price.csv', encoding='utf-8')
+
 # Judul dashboard
 st.title('PREDIKSI HARGA LAPTOP')
 
@@ -21,9 +24,6 @@ st.markdown("""
             Kumpulan data ini mengemulasikan harga laptop, menangkap berbagai fitur yang umumnya dikaitkan dengan laptop dan simulasi harga terkaitnya. 
             Kumpulan data tersebut mencakup atribut utama seperti merek, kecepatan prosesor, ukuran RAM, kapasitas penyimpanan, ukuran layar, dan berat.
             """)
-
-# Membaca file CSV
-df = pd.read_csv('Laptop_price.csv', encoding='utf-8')
 
 # Sidebar
 section = st.sidebar.selectbox("Choose Section", ["EDA", "4 Pilar Visualisasi", "Modelling"])
